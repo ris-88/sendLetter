@@ -27,7 +27,6 @@ my_name = "Илья"
 text = text.replace("%website%", website)
 text = text.replace("%friend_name%", friend_name)
 text = text.replace("%my_name%", my_name)
-print(text)
 
 letter = f"""\
 From: none@yandex.ru
