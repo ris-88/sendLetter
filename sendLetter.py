@@ -29,8 +29,8 @@ text = text.replace("%friend_name%", friend_name)
 text = text.replace("%my_name%", my_name)
 
 letter = f"""\
-From: none@yandex.ru
-To: friend@gmail.com
+From: devmanorg@yandex.ru
+To: rozanov.i88@yandex.ru
 Subject: Важно!
 Content-Type: text/plain; charset="UTF-8";
 {text}
@@ -39,6 +39,6 @@ Content-Type: text/plain; charset="UTF-8";
 letter = letter.encode("UTF-8")
 
 server = smtplib.SMTP_SSL('smtp.gmail.com:465')
-server.login(matvik@yandex.ru, 1231123)
-server.sendmail(none@yandex.ru, friend@gmail.com, letter)
+server.login("devmanorg@yandex.ru", "jdaewfpbrtiacmvf")
+server.sendmail("devmanorg@yandex.ru", "rozanov.i88@yandex.ru", letter)
 server.quit()
