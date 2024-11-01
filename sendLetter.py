@@ -1,5 +1,5 @@
 import smtplib
-text = ("""
+text = """
 Привет, %friend_name%! %my_name% приглашает тебя на сайт %website%!
 
 %website% — это новая версия онлайн-курса по программированию. 
@@ -16,7 +16,7 @@ text = ("""
 
 Регистрируйся → %website%  
 На курсы, которые еще не вышли, можно подписаться и получить уведомление о релизе сразу на имейл.
-""")
+"""
 
 website = "https://dvmn.org/referrals/Bi0LsR0LqmTYcz1YYdI4tboUe89XxRjXwwK4vR9x/"
 friend_name = "Девман"
@@ -39,6 +39,6 @@ Content-Type: text/plain; charset="UTF-8";
 letter = letter.encode("UTF-8")
 
 server = smtplib.SMTP_SSL('smtp.gmail.com:465')
-server.login("devmanorg@yandex.ru", "jdaewfpbrtiacmvf")
+server.login("devmanorg@yandex.ru")
 server.sendmail("devmanorg@yandex.ru", "rozanov.i88@yandex.ru", letter)
 server.quit()
